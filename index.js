@@ -45,7 +45,7 @@ app.post("/background", async (req, res) => {
         existingBackground.name === name ? "name" : "color";
       return res.status(400).send({
         success: false,
-        message: `Duplicate ${duplicateField} found. Please choose a unique value.`,
+        message: `Already Exite ${duplicateField}`,
       });
     }
 
