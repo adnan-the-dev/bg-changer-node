@@ -84,7 +84,7 @@ app.get("/colors", async (req, res) => {
 
 //Delete colors api
 
-app.delete("/background/:id", async (req, res) => {
+app.delete("/deleteBackground/:id", async (req, res) => {
   try {
     const bg = await Background.findByIdAndDelete(req.params.id);
     if (!bg) {
