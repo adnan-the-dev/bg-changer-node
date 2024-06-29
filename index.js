@@ -21,7 +21,7 @@ mongoose
   .connect(MONGO_URL)
   .then(() => {
     console.log("succesfully connected to database");
-    app.listen(PORT, () => {
+    app.listen(PORT || 7070, () => {
       console.log("server is running");
     });
   })
