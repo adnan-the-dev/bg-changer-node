@@ -21,7 +21,7 @@ mongoose
   .connect(MONGO_URL)
   .then(() => {
     console.log("succesfully connected to database");
-    app.listen(PORT || 7070, () => {
+    app.listen(PORT || 3300, () => {
       console.log("server is running");
     });
   })
@@ -105,4 +105,10 @@ app.delete("/deleteBackground/:id", async (req, res) => {
       message: e.message || "Some error occurred",
     });
   }
+});
+
+// show server runing message
+
+app.get("/", (req, res) => {
+  res.send("Server is running");
 });
